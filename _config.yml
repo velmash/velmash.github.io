@@ -38,6 +38,10 @@ lsi: false # GitHub Pages에서는 false로 설정
 # 관련 포스트 개수 설정 (기본값: 5)
 related_posts_limit: 5
 
+# include 설정 - _pages 폴더 포함
+include:
+  - _pages
+
 # 기본 레이아웃
 defaults:
   - scope:
@@ -53,6 +57,12 @@ defaults:
       show_date: true
   - scope:
       path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: "_pages"
       type: pages
     values:
       layout: single
