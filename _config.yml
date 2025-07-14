@@ -32,6 +32,12 @@ timezone: Asia/Seoul
 paginate: 5
 paginate_path: /page:num/
 
+# LSI (Latent Semantic Indexing) - 더 정확한 관련 포스트
+lsi: false # GitHub Pages에서는 false로 설정
+
+# 관련 포스트 개수 설정 (기본값: 5)
+related_posts_limit: 5
+
 # 기본 레이아웃
 defaults:
   - scope:
