@@ -5,36 +5,34 @@ description: "iOS 개발자의 기술 블로그"
 url: "https://velmash.github.io"
 baseurl: ""
 
-# Author 정보
+# 테마 설정 (GitHub Pages 호환)
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+minimal_mistakes_skin: "default"
+
+# 작성자 정보
 author:
   name: "윤형찬"
   bio: "iOS Developer @ 아이나비시스템즈"
   location: "Seoul, Korea"
   email: "hyengchan@gmail.com"
   github: "velmash"
-  linkedin: # 링크드인 있으면 추가
 
-# 테마 설정
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
-
-# 플러그인
+# 플러그인 (GitHub Pages 지원만)
 plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
+  - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-paginate
 
 # 기본 설정
 markdown: kramdown
 highlighter: rouge
 permalink: /:categories/:title/
-paginate: 5
 timezone: Asia/Seoul
+paginate: 5
+paginate_path: /page:num/
 
-# 기본 설정
+# 기본 레이아웃
 defaults:
   - scope:
       path: ""
@@ -43,14 +41,37 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
 
-# 댓글기능
-comments:
-  provider: "utterances"
-  utterances:
-    theme: "github-light"
-    issue_term: "pathname"
-    repo: "velmash/velmash.github.io"
+# 빌드 설정
+exclude:
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
