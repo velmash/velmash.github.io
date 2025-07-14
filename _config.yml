@@ -1,0 +1,56 @@
+# _config.yml
+title: "형찬의 iOS 개발 블로그"
+name: "윤형찬"
+description: "iOS 개발자의 기술 블로그"
+url: "https://velmash.github.io"
+baseurl: ""
+
+# Author 정보
+author:
+  name: "윤형찬"
+  bio: "iOS Developer @ 아이나비시스템즈"
+  location: "Seoul, Korea"
+  email: "hyengchan@gmail.com"
+  github: "velmash"
+  linkedin: # 링크드인 있으면 추가
+
+# 테마 설정
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+
+# 플러그인
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jemoji
+  - jekyll-include-cache
+
+# 기본 설정
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+paginate: 5
+timezone: Asia/Seoul
+
+# 기본 설정
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+# 댓글기능
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-light"
+    issue_term: "pathname"
+    repo: "velmash/velmash.github.io"
