@@ -26,15 +26,16 @@ toc_sticky: true
 // ViewModel 예시
 class BlackboxViewModel {
     let disposeBag = DisposeBag()
-    
+
     // Input
     let viewDidLoad = PublishRelay<Void>()
-    
+
     // Output
     let isLoading = BehaviorRelay<Bool>(value: false)
     let blackboxData = BehaviorRelay<[BlackboxModel]>(value: [])
-    
+
     init(useCase: BlackboxUseCase) {
         // 바인딩 로직
     }
 }
+```
