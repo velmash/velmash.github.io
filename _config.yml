@@ -44,6 +44,7 @@ defaults:
       comments: false
       share: true
       related: true
+      show_date: true
   - scope:
       path: ""
       type: pages
